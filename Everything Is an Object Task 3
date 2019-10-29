@@ -1,0 +1,14 @@
+import java.util.*;
+/** Exercise № 15 
+ * Using JAVADOC
+ * @author Usenkov
+ * @version 1.0
+ * Exercise completed successfully
+ */
+public class HelloDate {
+	public static void main(String args[]) {
+		System.out.println("Привет, мир!");
+		
+		
+	}
+}
