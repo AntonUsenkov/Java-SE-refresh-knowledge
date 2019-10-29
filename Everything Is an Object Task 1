@@ -1,0 +1,11 @@
+import java.util.*;
+
+
+public class Runner {
+	public static void main(String args[]) {
+		int a;
+		char b;
+		System.out.println(a = 1);
+		System.out.println(b = 'j');
+	}
+}
