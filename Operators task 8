@@ -1,0 +1,8 @@
+public class Literals {
+	public static void main (String args[]) {
+		long j1 = 0x2f;//Hexadecimal digit
+		long k2 = 0177; //Octal digit
+		System.out.println("Hexadecimal digit: " + Long.toBinaryString(j1));
+		System.out.println("Octal digit: " + Long.toBinaryString(k2));
+	}
+}
