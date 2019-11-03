@@ -1,0 +1,13 @@
+public class Dog {
+	public String name;
+	public String says;
+	
+	public static void main (String args[]) {
+		Dog spot = new Dog ();
+		spot.name = "Spot";
+		spot.says = "'Ruff!'";
+		System.out.println(spot.name.equals(spot.says));
+		System.out.println(spot.name == spot.says);
+		
+	}
+}
