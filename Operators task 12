@@ -1,0 +1,11 @@
+public class Runner {
+	public static int input_number = 0011;
+	
+	public static void main(String args[]) {
+		System.out.println("INPUT_NUMBER: " + input_number);
+		System.out.println(">>INPUT_NUMBER:" + Integer.toBinaryString (input_number <<= 1));
+		System.out.println("<<INPUT_NUMBER:" + Integer.toBinaryString (input_number <<= 2));
+		System.out.println(">>>INPUT_NUMBER:" + Integer.toBinaryString (input_number >>>= 2));
+		System.out.println(">>>INPUT_NUMBER:" + Integer.toBinaryString (input_number >>>= 1));
+	}
+}
