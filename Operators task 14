@@ -1,0 +1,14 @@
+public class Runner {
+	public static String first_string = "AGHCVG";
+	public static String second_string = "bwdhvbh";
+		public static String printEqualsOperataros (String first_string , String second_string) {
+			boolean f = (first_string == second_string) & (first_string.equals(second_string)); 
+			boolean t = (first_string != second_string) & (first_string.equals(second_string)); 
+			boolean k = (first_string.equals(second_string));
+			return (f + ";" + t + ";" + k);
+		}
+		public static void main (String args[]) {
+			System.out.println(printEqualsOperataros(first_string, second_string));
+		}
+		
+}
