@@ -1,0 +1,22 @@
+/* Write a program that uses two nested for loops and the modulus
+operator (%) to detect and print prime numbers (integral numbers that are not evenly
+divisible by any other numbers except for themselves and 1).*/
+
+public class Runner {
+	 public static void main(String[] args) { 
+			 
+		        for (int n = 2; n<=20; n++) {
+		            boolean isPrime=true;
+		            for (int i = 2; i < n; i++) {
+		 
+		                if ((n % i) == 0) {
+		                    isPrime = false;
+		 
+		                }
+		 
+		            }
+		            if (isPrime) System.out.println(n + " Prostoe");
+		            else System.out.print("");
+		        }
+		    }
+		}
