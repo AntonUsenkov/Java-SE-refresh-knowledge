@@ -1,0 +1,33 @@
+/*  Repeat Exercise 10 from the previous chapter, using the ternary operator
+and a bitwise test to display the ones and zeroes, instead of Integer.toBinaryString( ). */
+
+public class  Runner{
+ 
+        public static void main(String[] args) {
+                int first = 11110000;
+                int second = 00011111;
+                int a1 = (first & second);
+                int a2 = (first | second);
+                int a3 = (first ^ second);
+                System.out.println("With method: " + Integer.toBinaryString(first));
+                System.out.println("With method: " + Integer.toBinaryString(second));
+                System.out.println("With method and operator &: " + Integer.toBinaryString(a1));
+                System.out.println("With method and operator |: " + Integer.toBinaryString(a2));
+                System.out.println("With method and operator ^: " + Integer.toBinaryString(a3));
+                System.out.println("With a method that replaces toBinaryString: " + toBinaryString(a1));
+                System.out.println("With a method that replaces toBinaryString: " + toBinaryString(a2));
+                System.out.println("With a method that replaces toBinaryString: " + toBinaryString(a3));
+ 
+        }
+ 
+        public static String toBinaryString(int i) {
+            StringBuilder result = new StringBuilder();
+            while (i > 0) {
+                    result.append(i % 2 == 0 ? 0 : 1);
+                    i /= 2;
+            }
+            result.reverse();
+            return result.toString();
+    }
+
+}
