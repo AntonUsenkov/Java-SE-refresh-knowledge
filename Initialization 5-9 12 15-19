@@ -1,0 +1,181 @@
+/*Task 5
+Create a class called Dog with an overloaded bark( ) method. This
+method should be overloaded based on various primitive data types, and print different types
+of barking, howling, etc., depending on which overloaded version is called. Write a main( )
+that calls all the different versions.
+*/
+/*Task 6
+ Modify the previous exercise so that two of the overloaded methods have
+ two arguments (of two different types), but in reversed order relative to each other. Verify
+ that this works. 
+*/
+
+public class Dog {
+	static void bark (String s, int i) {
+		System.out.print(s + i + " times ");
+	}
+	static void bark (int j , String a) {
+		System.out.print(" and "+ j + a);
+	}
+	public static void main(String args[]) {
+		bark("The dog Anna says WUW ", 5);
+		bark(5 , " houses she sleeping");
+	}
+}
+
+/*Task 7
+Create a class without a constructor, and then create an object of that
+class in main( ) to verify that the default constructor is automatically synthesized.
+*/
+
+public class Task7 {
+	
+	public static void main(String args []) {
+		Task7 g = new Task7();
+	}
+}
+
+/*Task 8
+ Create a class with two methods. Within the first method, call the second
+ method twice: the first time without using this, and the second time using this—just to see it
+ working; you should not use this form in practice.  
+*/
+public class Runner {
+	public void First_Method() {
+		this.Second_Method();
+		Runner.Second_Method();
+	}
+	public static void Second_Method() {
+		
+	}
+  
+	/*Task 9
+   Create a class with two (overloaded) constructors. Using this, call the second constructor inside the first one.
+  */
+  public class Runner {
+	int a;
+	  int b;
+	  int c;
+
+	public Runner(int a, int b){
+	  }
+
+	public Runner(int a, int b, int c){
+	    this(a, b);
+	  }
+}
+/*Task 12
+ Create a class called Tank that can be filled and emptied, and has a
+ termination condition that it must be empty when the object is cleaned up. Write a
+ finalize( ) that verifies this termination condition. In main( ), test the possible scenarios
+ that can occur when your Tank is used
+*/
+public class Tank {
+	boolean all = false;
+	Tank(boolean status) {
+		all = status;
+	}
+	void checkIn() {
+		all = false;
+	}   
+	protected void finalize() {
+			if(all)
+				System.out.println("Error: all");
+			
+		}
+		public static void main(String[] args) {
+			Tank novel = new Tank(true);
+			new Tank(true);       
+			System.gc();   }
+	}
+//I'm used example from a book.
+ 
+/*Task 15
+Create a class with a String that is initialized using instance initialization.
+*/
+public class Runner {
+		private String s1;
+		{
+			s1 = "ermnbenrm";
+			System.out.print(s1);
+		}
+		Runner() {
+			System.out.print("efwfew");
+		}
+
+
+		public static void main(String[] args) {
+			Runner array = new Runner();
+		}
+
+	}
+  
+  /*Task 16
+   Create an array of String objects and assign a String to each element. Print the array by using a for loop. 
+  */
+  public class Runner {
+	public static void main(String args[]) {
+	 String [] a1 = new String[5];
+		a1 [0] = "kfnwd";
+		a1 [1] = "dvvwvwev";
+		a1 [2] = "efwvweesvw";
+		a1 [3] = "evwvawevwfwefcwefewfwq";
+		a1 [4] = "veveveewfwedfw";
+		for (int i = 0; i< a1.length; i++ )
+			System.out.print(" Array ellement: " + a1[i]);
+	}
+	
+}
+/*Task 17
+Create a class with a constructor that takes a String argument. During
+construction, print the argument. Create an array of object references to this class, but don’t
+actually create objects to assign into the array. When you run the program, notice whether
+the initialization messages from the constructor calls are printed.  
+*/
+public class Runner {
+	String a1 =null;
+	Runner(String a1){
+        System.out.println(a1 = "str");
+   }
+
+   public static void main(String[] args) {
+        Runner[] array = new Runner[5];
+        	
+        }
+        	
+   }
+/*Task 18
+Complete the previous exercise by creating objects to attach to the array of references.
+*/
+public class Runner {
+		String a1 =null;
+		Runner(String a1){
+	        System.out.println(a1 = "str");
+	   }
+
+	   public static void main(String[] args) {
+	        Runner[] array = new Runner[2];
+	        	array [0] = new Runner (null);
+	        	array [1] = new Runner(null);
+	        }	
+	   }
+//One question: why the compiler displays string values ​​if I did not assign it to the array of links? 
+
+/*task 19
+ Write a method that takes a vararg String array. Verify that you can
+ pass either a comma-separated list of Strings or a String[] into this method.  
+*/
+public class Runner {
+
+		public static void print(String... args) {
+			for (String s : args) {
+				System.out.println(s);
+			}
+		}
+
+		public static void main(String[] args) {
+			print("Apple","Orange","Peach", "Strawberry","Banana");
+			print(new String[] {"Apple","Orange","Peach", "Strawberry","Banana"});
+
+		}
+}
