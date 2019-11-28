@@ -1,8 +1,9 @@
 public class Dog {
-	public String name;
-	public String says;
-	
+	// if I wouldn add a value, the check returned a value of zero.
+	public static String name = "cwec";
+	public static String says = "wefe";
 	public static void main (String args[]) {
+		System.out.println(name + " " + says);
 		Dog dog1 = new Dog();
 		dog1.name = "Spot";
 		dog1.says = "'Ruff!'";
