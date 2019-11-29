@@ -116,13 +116,11 @@ public class Runner {
   public class Runner {
 	public static void main(String args[]) {
 	 String [] a1 = new String[5];
-		a1 [0] = "kfnwd";
-		a1 [1] = "dvvwvwev";
-		a1 [2] = "efwvweesvw";
-		a1 [3] = "evwvawevwfwefcwefewfwq";
-		a1 [4] = "veveveewfwedfw";
-		for (int i = 0; i< a1.length; i++ )
-			System.out.print(" Array ellement: " + a1[i]);
+	 for (int i = 0; i< a1.length; i++ ) {
+		a1[i] = "wcwenc" ;
+		System.out.println(" Array ellement: " + a1[i]);
+	 }
+			
 	}
 	
 }
