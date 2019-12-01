@@ -1,0 +1,105 @@
+/* task 1 Create a class in a package. Create an instance of your class outside of that package. */
+import by.iba.trainig.*;
+
+public class ClassB {
+	public static void main(String args[]) {
+		System.out.print("In package:");
+		by.iba.trainig.ClassA b = new by.iba.trainig.ClassA();
+	}
+}
+package by.iba.trainig;
+
+public class ClassA {
+	public ClassA () {
+		 System.out.println("This is Class A");
+	}
+}
+/* task 3 Create two packages: debug and debugoff, containing an identical class
+with a debug( ) method. The first version displays its String argument to the console, the 
+second does nothing. Use a static import line to import the class into a test program, and
+demonstrate the conditional compilation effect.*/
+
+import static debug.Debug.*;
+
+public class Runner {
+	public static void main(String[] args) {
+		debug("testing imports");
+	}
+
+}
+package debug;
+
+public class Debug {
+	public static void  debug (String a) {
+		System.out.println(a);
+	}
+}
+package debugoff;
+
+public class Debug {
+	public static void debug (String a) {
+		
+	}
+}
+/* task 4 Show that protected methods have package access but are not public. */
+import static iba.gomel.training.ClassB.*;
+
+public class ClassA {
+	public static void main(String args[]) {
+		System.out.println("veeveve");
+	}
+}
+package iba.gomel.training;
+
+public class ClassB {
+	protected void print(String s) {
+		System.out.println(s);
+	}
+}
+/*task 5  Create a class with public, private, protected, and package-access
+fields and method members. Create an object of this class and see what kind of compiler
+messages you get when you try to access all the class members. Be aware that classes in the
+same directory are part of the “default” package.*/
+
+public class Runner {
+	public static int num1;
+	private static int num2;
+	protected String string;
+	
+	public void Method_1(int num1, int num2) {
+		System.out.println (num1 += num2);
+	}
+	private void Method_2(int num1, int num2) {
+		System.out.println (num1 -= num2);
+	}
+	protected void Methode_3(String string) {
+		System.out.println(string); 
+	}
+	public static void main(String args[]) {
+		Runner n = new Runner(); 
+			n.Method_1(4, 5);
+			n.Method_2(2, 5);
+			n.Methode_3("wjcbnewjn");
+	}
+}
+/* task 6  Create a class with protected data. Create a second class in the same file
+with a method that manipulates the protected data in the first class.*/
+import training.iba.ClassB;
+
+
+public class ClassA {
+	public static void changeFields(ClassB f, int i, String s) {
+		f.i = i;
+		f.s = s;
+	}
+	public static void main(String[] args) {
+		ClassB f = new ClassB();
+		System.out.println("f.i = " + f.i + ", f.s = " + f.s);
+	}
+}
+package training.iba;
+
+public class ClassB {
+	protected int i = 128;
+	protected String s = "hello";
+}
